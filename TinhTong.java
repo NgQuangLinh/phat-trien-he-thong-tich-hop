@@ -1,4 +1,4 @@
-package TinhTong;
+package Tuan2;
 import java.util.Scanner;
  
  
