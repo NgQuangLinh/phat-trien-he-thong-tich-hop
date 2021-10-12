@@ -5,9 +5,9 @@ import java.net.InetAddress;
 public class ServerBai1 {
 	
 	public static String Bai1(String[] so, String[]chu, String str) {
-		for(int i=0;i<extracted(so).length;i++) {
-			if(str.equalsIgnoreCase(extracted(so)[i]))
-				return extracted(chu)[i];
+		for(int i=0;i<so.length;i++) {
+			if(str.equalsIgnoreCase(so[i]))
+				return chu[i];
 		}
 		return "khong co so nguyen to nay";
 	}
@@ -32,7 +32,7 @@ public class ServerBai1 {
 			
 			int port = receivePacket.getPort();
 			
-			String sentence_to_client = sentence_to_client.Bai1(so, chu, sentence)+ " (server accpeted!)";
+			String sentence_to_client = Bai1(so, chu, sentence)+ " (server accpeted!)";
 			
 			sendData = sentence_to_client.getBytes();
 			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
