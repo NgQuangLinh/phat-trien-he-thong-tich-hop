@@ -1,2 +1,2 @@
-# phat-trien-he-thong-tich-hop
+# phat trien he thong tich hop
 bai tap
