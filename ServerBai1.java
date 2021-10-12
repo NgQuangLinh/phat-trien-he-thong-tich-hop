@@ -32,7 +32,7 @@ public class ServerBai1 {
 			
 			int port = receivePacket.getPort();
 			
-			String sentence_to_client = sentence_to_client.Bai1(so, extracted(chu), sentence)+ " (server accpeted!)";
+			String sentence_to_client = sentence_to_client.Bai1(so, chu, sentence)+ " (server accpeted!)";
 			
 			sendData = sentence_to_client.getBytes();
 			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
@@ -41,8 +41,4 @@ public class ServerBai1 {
 		}
 		
 	}
-
-    private static String[] extracted(String[] chu) {
-        return chu;
-    }
 }
